@@ -19,7 +19,7 @@ export function getSpotifyAcessToken(){
 
 export function searchSongs(accessToken,songTitle,artistName){
     return fetch(
-        `https://api.spotify.com/v1/search?q=track:${songTitle}+artist:${artistName}&type=track&limit=1`,
+        `https://api.spotify.com/v1/search?q=track:${songTitle}+artist:${artistName}&type=track`,
         {
             headers:{
                 Authorization: `Bearer ${accessToken}`,
