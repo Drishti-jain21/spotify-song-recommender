@@ -27,13 +27,11 @@ async function submitForm(ev){
 
     songsListElement.innerHTML = recommendedSongs
         .slice(0,5)
-        .map((song) =>{
-            return(
-                `<span class="rounded-md"><a href=${song.external_urls.spotify} type="__blank">${song.name}</a></span>` 
-            )
-        })
-        .join("")
-    const songsContainer = document.getElementById("songs-container");
-    songsContainer.scrollIntoView();
+        .reduce(
+            (acc, song) =>
+              acc +
+              `<li class="rounded-md bg-slate-200"><a href=${song.external_urls.spotify} type="__blank">${song.name}<a></li>`,
+            ""
+        )
 } 
 
