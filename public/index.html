@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Song Recommender</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-8" onload="main()">
+    <form class ="flex flex-col space-y-4" onsubmit="submitForm(event)">
+        <span class="inline-block text-xl font-bold mb-2">Song 1</span>
+        <input class="border px-4 py-2 rounded-md w-full" placeholder="Song Name" name="title1" type="text">
+        <input class="border px-4 py-2 rounded-md w-full" placeholder="Artist Name" name="artist1" type="text">
+        <span class="inline-block text-xl font-bold mb-2 mt-12">Song 2</span>
+        <input class="border px-4 py-2 rounded-md w-full" placeholder="Song Name" name="title2" type="text">
+        <input class="border px-4 py-2 rounded-md w-full" placeholder="Artist Name" name="artist2" type="text">
+        <span class="inline-block text-xl font-bold mb-2 mt-12">Song 3</span>
+        <input class="border px-4 py-2 rounded-md w-full" placeholder="Song Name" name="title3" type="text">
+        <input class="border px-4 py-2 rounded-md w-full" placeholder="Artist Name" name="artist3" type="text">
+        <button class="bg-blue-500 p-4 rounded-md text-white">Get Recommended Songs</button>
+    </form>
+
+    <div id="songs-container">
+        <span class="inline-block text-2xl font-bold mb-6 mt-12">Spotify Recommended Songs</span>
+        <div id="recommended-songs-list" class="flex flex-col space-y-2"></div>
+    </div>
+    <script src = "./script.js"></script>
+</body>
+
+</html>
