@@ -31,6 +31,12 @@ app.get('/recommendations', async (req,res)=>{
     }
     try{
         const accessToken = await getSpotifyAcessToken()
+        if(!accessToken){
+            res.status(404).json({
+                message: "Token not available"
+            })
+            return
+        }
         const songTitles = [title1, title2, title3];
         const artistNames = [artist1, artist2, artist3];
         const songsId = []
