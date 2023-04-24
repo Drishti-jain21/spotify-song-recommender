@@ -7,7 +7,11 @@
     <title>Spotify Song Recommender</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="p-8" onload="main()">
+<body class="p-8 bg-green-500" onload="main()">
+    <img
+    src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png"
+    class="max-w-sm rounded border bg-white p-1 dark:border-neutral-700 dark:bg-neutral-800 mb-4"
+    alt="logo" />
     <form class ="flex flex-col space-y-4" onsubmit="submitForm(event)">
         <span class="inline-block text-xl font-bold mb-2">Song 1</span>
         <input class="border px-4 py-2 rounded-md w-full" placeholder="Song Name" name="title1" type="text">
@@ -18,7 +22,7 @@
         <span class="inline-block text-xl font-bold mb-2 mt-12">Song 3</span>
         <input class="border px-4 py-2 rounded-md w-full" placeholder="Song Name" name="title3" type="text">
         <input class="border px-4 py-2 rounded-md w-full" placeholder="Artist Name" name="artist3" type="text">
-        <button class="bg-blue-500 p-4 rounded-md text-white">Get Recommended Songs</button>
+        <button class="bg-yellow-500 p-4 rounded-md text-white">Get Recommended Songs</button>
     </form>
 
     <span class="inline-block text-2xl font-bold mb-6 mt-12">Spotify Recommended Songs</span>

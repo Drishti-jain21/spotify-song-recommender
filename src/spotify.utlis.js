@@ -43,5 +43,4 @@ export function getRecommendedSongs(accessToken,songId){
     )
     .then((res) => res.json())
     .then((data) => data.tracks)
-    
 }
